@@ -1,0 +1,37 @@
+{
+  "project_name": "Sample 220 MWh BESS Project",
+  "container": {
+    "dc_capacity_per_container": 2.2,
+    "num_containers": 100,
+    "aux_discharge_per_container_mw": 0.006,
+    "aux_charge_per_container_mw": 0.006
+  },
+  "timeline": {
+    "fat_required": true,
+    "fat_months": 2,
+    "sat_required": true,
+    "sat_months": 1,
+    "num_years": 15
+  },
+  "auxiliary": {
+    "additional_aux_enabled": false,
+    "additional_aux_value": 0.0,
+    "standby_enabled": true,
+    "standby_value": 0.15
+  },
+  "augmentation": {
+    "enabled": true,
+    "events": [
+      {"year": 4, "containers": 10},
+      {"year": 8, "containers": 15},
+      {"year": 12, "containers": 20}
+    ],
+    "mismatch_losses": 99.0,
+    "ac_mv_power_to_plant_mw": 0.5
+  },
+  "requirements": {
+    "Year 1": {"discharge_poi": 195.0, "charge_poi": null},
+    "Year 2": {"discharge_poi": 194.0, "charge_poi": null},
+    "Year 3": {"discharge_poi": 193.0, "charge_poi": null}
+  }
+}
